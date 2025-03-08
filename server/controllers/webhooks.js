@@ -26,6 +26,7 @@ export const clerkWebhooks = async (req, res) => {
       console.error("❌ Webhook verification failed:", err);
       return res.status(400).json({ error: "Invalid webhook signature" });
     }
+    
 
     // Extract event data
     const { data, type } = req.body;
